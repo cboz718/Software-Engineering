@@ -7,6 +7,9 @@ from django.conf.urls.defaults import patterns, include, url
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'Airline.Flights.views.home', name='home'),
+    (r'^login/$', 'django.contrib.auth.views.login', {
+    'template_name': 'Login.html'
+}),
     # url(r'^Airline/', include('Airline.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
